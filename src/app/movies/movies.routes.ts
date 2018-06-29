@@ -1,6 +1,6 @@
 import { GetPoppularComponent } from './get-poppular';
-import { HomeComponent } from './container/home/home.component'
-import { GetDetailComponent } from './get-detail/get-detail.component'
+import { HomeComponent } from './container/home/home.component';
+import { GetDetailComponent } from './get-detail/get-detail.component';
 
 export const route = [
     {
@@ -8,7 +8,7 @@ export const route = [
         component: GetPoppularComponent
     },
     {
-        path: 'movies_details',
+        path: 'movies_details:movie_id',
         component: GetDetailComponent
     }
 ];
