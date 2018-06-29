@@ -5,7 +5,7 @@ import { GetDetailComponent } from './get-detail/get-detail.component'
 export const route = [
     {
         path: 'movies_poppular',
-        component: HomeComponent
+        component: GetPoppularComponent
     },
     {
         path: 'movies_details',
