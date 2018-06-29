@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GetDetailService } from './get-detail.service';
 import { ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
-
+import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-get-detail',
@@ -14,6 +14,7 @@ export class GetDetailComponent implements OnInit {
   public video: any;
   public review: any;
   public detail: any;
+  public videopath = `https://www.youtube.com/embed/vn9mMeWcgoM`;
   constructor(public getDetailService: GetDetailService, public route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -27,18 +28,23 @@ export class GetDetailComponent implements OnInit {
 
   getVideo(movie_id) {
     this.getDetailService.getVideoMovie(movie_id).subscribe((result) => {
+      console.log('video:::', result);
       this.video = result;
+      // this.videopath = `https://www.youtube.com/embed/${this.video.results[0].key}?autoplay=1&origin=http://example.com`;
     });
   }
 
   getReview(movie_id) {
     this.getDetailService.getReviewMovie(movie_id).subscribe((result) => {
+      console.log('review ::', result);
       this.review = result;
     });
   }
 
   getDetailMovie(movie_id) {
     this.getDetailService.getDetailMovie(movie_id).subscribe((result) => {
+      console.log('detail ::', result);
       this.detail = result;
     });
+  }
 }

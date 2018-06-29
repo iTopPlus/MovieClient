@@ -9,12 +9,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatProgressBarModule } from '@angular/material';
 
-import { MatToolbarModule,MatCardModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule } from '@angular/material';
 
 // Container
-import { HomeComponent } from './container/home/home.component'
+import { HomeComponent } from './container/home/home.component';
 import { GetPoppularComponent, GetPoppularMovieService } from './get-poppular';
-import { GetDetailComponent } from './get-detail/get-detail.component'
+import { GetDetailComponent, GetDetailService } from './get-detail';
 
 import { route } from './movies.routes';
 
@@ -25,7 +25,8 @@ const COMPONENT = [
     GetPoppularComponent
 ];
 const SERVICE = [
-    GetPoppularMovieService
+    GetPoppularMovieService,
+    GetDetailService
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetPoppularMovieService } from './get-popular.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-poppular',
@@ -35,6 +35,7 @@ export class GetPoppularComponent implements OnInit {
   }
 
   sendMovieID(movieid) {
+    console.log('sendMovieID :::', movieid);
     this.route.navigate(['/movies_details/' + movieid]);
   }
 
