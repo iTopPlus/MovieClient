@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { GetPoppularComponent } from './src/app/movies/get-poppular/get-poppular.component';
-
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GetPoppularComponent
+    AppComponent
+    RouterModule.forRoot(routes)
   ],
   imports: [
     BrowserModule
