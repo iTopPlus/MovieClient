@@ -41,4 +41,5 @@ export class GetDetailComponent implements OnInit {
     this.getDetailService.getDetailMovie(movie_id).subscribe((result) => {
       this.detail = result;
     });
+  }
 }
