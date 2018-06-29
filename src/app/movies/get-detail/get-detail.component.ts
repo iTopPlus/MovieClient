@@ -3,13 +3,13 @@ import { GetDetailService } from './get-detail.service';
 import { ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-get-detail',
   templateUrl: './get-detail.component.html',
   styleUrls: ['./get-detail.component.css']
 })
 export class GetDetailComponent implements OnInit {
-
   public movies_id: string;
   public video: any;
   public review: any;
@@ -41,6 +41,4 @@ export class GetDetailComponent implements OnInit {
     this.getDetailService.getDetailMovie(movie_id).subscribe((result) => {
       this.detail = result;
     });
-  }
-
 }

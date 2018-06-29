@@ -10,10 +10,6 @@ export const routes: Routes = [
     },
     {
         path: 'movies_poppular',
-        component: HomeComponent
-    },
-    {
-        path: 'movies_details',
         loadChildren: './movies/movies.module#MoviesModule'
-    }
+    },
 ];

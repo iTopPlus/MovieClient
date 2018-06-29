@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetPoppularMovieService } from './get-popular.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-get-poppular',
@@ -9,8 +10,7 @@ import { GetPoppularMovieService } from './get-popular.service';
 export class GetPoppularComponent implements OnInit {
   public movies_list: any;
   public curentPage: number;
-  constructor(public getPoppularMovieService: GetPoppularMovieService) { }
-
+  constructor(public getPoppularMovieService: GetPoppularMovieService, public route: Router) { }
   ngOnInit() {
     this.curentPage = 1;
     this.getMovies(1);
@@ -18,6 +18,7 @@ export class GetPoppularComponent implements OnInit {
 
   getMovies(page) {
     this.getPoppularMovieService.getPoppularMovies(page).subscribe((result) => {
+      console.log('result ::', result);
       this.movies_list = result;
     });
   }
@@ -33,4 +34,15 @@ export class GetPoppularComponent implements OnInit {
     this.getMovies(this.curentPage);
   }
 
+  sendMovieID(movieid) {
+    this.route.navigate(['/movies_details/' + movieid]);
+  }
+
+  nextPage() {
+
+  }
+
+  previousPage() {
+
+  }
 }
