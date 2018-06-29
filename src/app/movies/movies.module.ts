@@ -11,10 +11,16 @@ import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatProgressBarModu
 
 
 // Container
+import { HomeComponent } from './container/home/home.component'
 import { GetPoppularComponent, GetPoppularMovieService } from './get-poppular';
+import { GetDetailComponent } from './get-detail/get-detail.component'
 
 import { route } from './movies.routes';
+
+
 const COMPONENT = [
+    HomeComponent,
+    GetDetailComponent,
     GetPoppularComponent
 ];
 const SERVICE = [
