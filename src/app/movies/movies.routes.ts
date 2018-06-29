@@ -8,7 +8,7 @@ export const route = [
         component: GetPoppularComponent
     },
     {
-        path: 'movies_details',
+        path: 'movies_details/:movie_id',
         component: GetDetailComponent
     }
 ];

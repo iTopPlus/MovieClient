@@ -5,6 +5,7 @@ import { HomeComponent } from './containers/home';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 
+
 import { MoviesModule } from './movies/movies.module';
 
 @NgModule({

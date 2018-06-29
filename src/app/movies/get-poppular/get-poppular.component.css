@@ -1,0 +1,34 @@
+.main-content {
+    width: 100%;
+    text-align: center;
+}
+
+.sub-content{
+    text-align: left;
+    margin:5px 10px;
+    display: inline-block;
+    width: 45%;
+}
+
+.sub-content:hover{
+    background: darkgrey;
+}
+
+.sub-content:active{
+    background: darkgrey;
+}
+
+img{
+    width: 100%;
+}
+.btn{
+    background: white;
+    border: 1px solid white;
+    height: 50px;
+}
+.btn:hover{
+    background: gold;
+}
+.btn:active{
+    background: gold;
+}

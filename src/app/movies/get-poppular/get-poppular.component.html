@@ -1,3 +1,44 @@
-<p>
-  get-poppular works!
-</p>
+<mat-toolbar style="width:100%;background:#FF9F00;color:black">
+  <mat-toolbar-row>
+    <span>
+      <h1>MOVIE LOVER</h1>
+    </span>
+    <div style="margin:0 auto;">
+      <span>
+        <button class="btn" (click)="previousPage()"> <--Previous </button><i> - </i>
+        <button class="btn" (click)="nextPage()"> Next--> </button>
+      </span>
+      <span>
+      </span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="main-content">
+  <div class="sub-content" (click)="sendMovieID('asdasd');">
+    <mat-card>
+      <h3>Movie Name</h3>
+      <img src="https://blackwhiteandredposters.files.wordpress.com/2010/11/gamer-movie-poster.jpg">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+        more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </mat-card>
+  </div>
+  <div class="sub-content">
+    <mat-card>
+      <h3>Movie Name</h3>
+      <img src="https://blackwhiteandredposters.files.wordpress.com/2010/11/gamer-movie-poster.jpg">
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+        more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </mat-card>
+  </div>
+</div>

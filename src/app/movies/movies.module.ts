@@ -9,6 +9,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatProgressBarModule } from '@angular/material';
 
+import { MatToolbarModule,MatCardModule } from '@angular/material';
 
 // Container
 import { HomeComponent } from './container/home/home.component'
@@ -29,6 +30,8 @@ const SERVICE = [
 
 @NgModule({
     imports: [
+        MatToolbarModule,
+        MatCardModule,
         CommonModule,
         BrowserModule,
         BrowserAnimationsModule,
