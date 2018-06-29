@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { GetPoppularComponent } from './src/app/movies/get-poppular/get-poppular.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GetPoppularComponent
   ],
   imports: [
     BrowserModule
