@@ -1,0 +1,20 @@
+language: node_js
+node_js: 
+  - "8.1.2"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - yarn global add firebase-tools
+  - yarn install
+script :
+  - yarn run build
+  - firebase deploy --token "$FIREBASE_TOKEN" --only functions
+after_success:  
+
+notifications:
+  email :
+    on_failure: tonmanna@gmail.com
+    on_success: tonmanna@gmail.com
