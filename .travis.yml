@@ -11,7 +11,7 @@ before_script:
   - yarn install
 script :
   - yarn run build
-  - firebase deploy --token "$FIREBASE_TOKEN" --only functions
+  - firebase deploy --token "$FIREBASE_TOKEN"
 after_success:  
 
 notifications:
